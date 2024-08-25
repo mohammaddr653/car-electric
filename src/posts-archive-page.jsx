@@ -128,7 +128,7 @@ const PostsArchivePage = () => {
         console.log("this is end : ")
         console.log(end)
 
-    },)
+    },[start,end])
 
     return (
         <div id="posts-archive-page">
@@ -161,7 +161,7 @@ const PostsArchivePage = () => {
                                 {posts?.slice(start,end).map((item,index)=>{
                                     return(
                                         <div className="post-card col p-2 overflow-hidden">
-                                            <Link to={item.href}>
+                                            <Link to={`./posts-single/${item.id}`}>
                                                 <div>
                                                     <div className='image'> 
                                                         <img src={item.img} alt="#" />
@@ -221,7 +221,11 @@ const PostsArchivePage = () => {
                                     )
                                 })}
                             </div>
+                            {posts.length?
+                            //pagination gets mainobj , start , end , number attrebiutes .
                             <Pagination mainobj={posts} start={setStart} end={setEnd} number={2}/>
+                            :null}
+                            
                         </div>
                     </div>                    
                 </div>

@@ -7,8 +7,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const Pagination = (props) => {
     const[arrayLength,setArrayLength]=useState(0);
-    const[pages,setPages]=useState(0);
-    const[selectedPage,setSelectedPage]=useState(1);
+    const[pages,setPages]=useState([]);
+    const[selectedPage,setSelectedPage]=useState();
 
     useEffect(()=>{
         setArrayLength(props.mainobj?.length)
@@ -20,21 +20,32 @@ const Pagination = (props) => {
         let decimalPortion=(arrayLength/props.number)%1;
         if(intPortion>=0){
             let result;
+            let array=[];
             if(decimalPortion===0){
                 result=intPortion;
             }else{
                 result=intPortion+1;
             }
-            setPages(result);
+            for(let x=1;x<=result;x++){
+                array.push(x);
+            }
+            setPages([...array]);
         }
     },[props.number,arrayLength])
 
 
+    useEffect(()=>{
+        changePage(1);
+    },[pages])
+
     function changePage(value){
-        let start=(value*props.number)-props.number;
-        let end=(value*props.number);
-        props.start(start);
-        props.end(end);
+        if(value>0 && value<arrayLength-1){
+            setSelectedPage(value);
+            let start=(value*props.number)-props.number;
+            let end=(value*props.number);
+            props.start(start);
+            props.end(end);    
+        }
     }
 
     // useEffect(()=>{
@@ -52,13 +63,13 @@ const Pagination = (props) => {
         <div className='pagination-container container-fluid p-0 m-0'>
             <nav className='rounded overflow-hidden'>
                 <ul class="pagination m-0 rounded overflow-hidden">
-                    <li class="page-item rounded-0 btn btn-primary">
+                    <li class="page-item rounded-0 btn btn-primary" onClick={function(){changePage(selectedPage+1)}}>
                         صفحه بعد
                     </li>
-                    <li class="page-item btn bg-light rounded-0">1</li>
-                    <li class="page-item btn bg-light rounded-0" onClick={function(){changePage(2)}}>2</li>
-                    <li class="page-item btn bg-light rounded-0">3</li>
-                    <li class="page-item rounded-0 btn btn-primary">
+                    {pages.map((item,index)=>{
+                        return <li key={index} class="page-item btn bg-light rounded-0" onClick={function(){changePage(item)}}>{item}</li>
+                    })}
+                    <li class="page-item rounded-0 btn btn-primary" onClick={function(){changePage(selectedPage-1)}}>
                         صفحه قبل
                     </li>
                 </ul>

@@ -492,18 +492,6 @@ div#single-car-page div#single-car-page-main>div.container>div.properties{
     background-color: white;
 }
 
-div#single-car-page div#single-car-page-main>div.container>div.sticky>div.body-container{
-    width: 75%;
-}
-div#single-car-page div#single-car-page-main>div.container>div.sticky>aside.side-container{
-    position: relative;
-    width: 25%;
-}
-div#single-car-page div#single-car-page-main>div.container>div.sticky>aside.side-container>div.aside-wrapper{
-    position: relative;
-    /* top: ; */
-
-}
 div#single-car-page div#single-car-page-main>div.container>div.sticky>aside.side-container>div.aside-wrapper div.latest-posts a.item{
     aspect-ratio: 3/2;
     width: 100%;

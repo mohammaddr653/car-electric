@@ -25,6 +25,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Pooster1 from "./pooster1";
 import Gallery from "./gallery";
 import IssuesWidget from "./issues-widget";
+import Sticky from "./sticky";
+import StickyBody from "./sticky-body";
+import StickyAside from "./sticky-aside";
 
 
 
@@ -89,53 +92,6 @@ const SingleCarPage = () => {
 
 
 
-    useEffect(() => {
-        stickeyCheck()
-    },[]);
-    function stickeyCheck(){
-        console.log("stickey check start");
-        let bodyContainer=document.querySelector("div#single-car-page div#single-car-page-main>div.container>div.sticky>div.body-container");
-        let sideContainer = document.querySelector("div#single-car-page div#single-car-page-main>div.container>div.sticky>aside.side-container");
-        let sideWrapper = document.querySelector("div#single-car-page div#single-car-page-main>div.container>div.sticky>aside.side-container>div.aside-wrapper");
-        sideWrapper.style.position="relative";
-        window.onscroll=()=>{
-            let viewportHeight = window.innerHeight;
-            let bodyHeight=bodyContainer.getBoundingClientRect().height;
-            let sideHeight=sideContainer.getBoundingClientRect().height;
-            let wrapperHeight=sideWrapper.getBoundingClientRect().height;  
-            let space=sideHeight-wrapperHeight;
-            let wrapperWidth;
-            if(sideWrapper.style.position==="relative"){
-                wrapperWidth=sideWrapper.getBoundingClientRect().width;
-            }  
-            if(sideHeight>wrapperHeight){
-                if(bodyHeight-viewportHeight>0 && bodyContainer.getBoundingClientRect().bottom-viewportHeight<=space){
-                    sideWrapper.style.position="fixed";
-                    //پنجاه ارتفاع هدر است
-                    // sideWrapper.style.top=0+"50"+"px";
-                    sideWrapper.style.bottom=0+"px";
-                    sideWrapper.style.width=wrapperWidth+"px";
-                    sideWrapper.style.top="unset";
-                    if(bodyContainer.getBoundingClientRect().bottom-viewportHeight<=0){
-                        sideWrapper.style.position="relative";
-                        sideWrapper.style.width="unset";
-                        sideWrapper.style.bottom="unset";
-                        sideWrapper.style.top=space+"px";
-                    }
-                }
-                if(bodyContainer.getBoundingClientRect().bottom-viewportHeight>space){
-                    // sideWrapper.style.width="2px";
-                    sideWrapper.style.position="relative";
-                    sideWrapper.style.width="unset";
-
-
-                }
-
-    
-            }
-        }
-
-    }
     return (
         <div id="single-car-page">
             <Header></Header>
@@ -242,85 +198,8 @@ const SingleCarPage = () => {
                     <div className="bg-primary p-0 container-fluid">
                         <Pooster1></Pooster1>
                     </div>
-                    {/* <div className="main-content m-0 p-0">
-                        <div className="items">
-                            <div className="item clicked" number={0} onClick={function(e){
-                                accordion(e);
-                            }}>
-                                بررسی تخصصی
-                            </div>
-                            <div className="item" number={1} onClick={function(e){
-                                accordion(e);
-                            }}>
-                                مشخصات
-                            </div>
-                            <div className="item" number={2} onClick={function(e){
-                                accordion(e);
-                            }}>
-                                عیب یابی و تعمیر
-                            </div>
-
-                        </div>
-                        <div className="contents">
-                            <div className=" content show" number={0}>
-                                بررسی
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                            </div>
-                            <div className=" content" number={1}>
-                                <ul>
-                                    {clickedCarPropKeys ? clickedCarPropKeys.map((keyItem,keyIndex)=>{
-                                        return(
-                                            <li>
-                                                <span>                                                
-                                                    {keyItem}
-                                                </span>
-                                                {clickedCarPropValues ? clickedCarPropValues.map((valueItem,valueIndex)=>{
-                                                    if(keyIndex===valueIndex){
-                                                        return(
-                                                            <span>{valueItem}</span>
-                                                        )
-                                                    }
-                                                }) :null}
-    
-                                            </li>
-                                            
-                                            
-                                        )
-                                    }) : null}
-                                </ul>
-                            </div>
-                            <div className="content" number={2}>
-                                عیب یابی
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                                <div className="p-5"></div>
-                            </div>
-                        </div>
-                    </div> */}
-                    <div className="m-0 row sticky">
-                        <div className="body-container d-flex flex-column gap-3 p-0 ps-md-3 ">
+                    <Sticky>
+                        <StickyBody>
                             <div className="gap-4 d-flex flex-column">
                                 <span>مشخصات کلی :</span>
                                 <div className="property-scrollable p-4 border rounded gap-5 d-flex flex-row flex-wrap">
@@ -466,43 +345,40 @@ const SingleCarPage = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <aside className="d-none d-md-block side-container p-0 ">
-                            <div className="aside-wrapper">
-                                {/* هیچ عنصری مارجین نباید داشته باشد */}
-                                <div className="latest-posts p-0 pe-3 d-flex flex-column gap-3 m-0">
+                        </StickyBody>
+                        <StickyAside>
+                            <div className="latest-posts p-0 pe-3 d-flex flex-column gap-3 m-0">
                                 <Ads adsId={[2]}></Ads>
                                 <Ads adsId={[4]}></Ads>
                                 <div className="row p-2 rounded m-0">
-                                        آخرین مطالب
-                                    </div>
-                                    <div className="d-flex flex-column gap-3 p-0 m-0">
-                                        {globalCon.posts ? globalCon.posts.slice(0,5).map((item,index)=>{
-                                            return(
-                                                <Link key={index} to={"#"} className="p-0 item">
-                                                    <img src={item.img} alt="" />
-                                                    <span className="title">
-                                                        <h4>
-                                                            {item.title}
-                                                        </h4>
+                                    آخرین مطالب
+                                </div>
+                                <div className="d-flex flex-column gap-3 p-0 m-0">
+                                    {globalCon.posts ? globalCon.posts.slice(0,5).map((item,index)=>{
+                                        return(
+                                            <Link key={index} to={"#"} className="p-0 item">
+                                                <img src={item.img} alt="" />
+                                                <span className="title">
+                                                    <h4>
+                                                        {item.title}
+                                                    </h4>
+                                                </span>
+                                                <div className="bottom">
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                                        </svg>
+                                                        {item.readingTime}
                                                     </span>
-                                                    <div className="bottom">
-                                                        <span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                                                              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
-                                                              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
-                                                            </svg>
-                                                            {item.readingTime}
-                                                        </span>
-                                                    </div>
-                                                </Link>
-                                            )
-                                        }):null}
-                                    </div>
+                                                </div>
+                                            </Link>
+                                        )
+                                    }):null}
                                 </div>
                             </div>
-                        </aside>
-                    </div>                    
+                        </StickyAside>
+                    </Sticky>                    
                 </div>
                 <div className="container-fluid p-0 bg-dark">
                     <IssuesWidget object={clickedCar}></IssuesWidget>

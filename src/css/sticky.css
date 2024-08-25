@@ -1,0 +1,27 @@
+div.sticky>div.body-container{
+    width: 77%;
+    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.147); */
+    background-color: white;
+
+}
+div.sticky>aside.side-container{
+    position: relative;
+    width: 23%;
+}
+div.sticky>aside.side-container>div.aside-wrapper{
+    position: relative;
+    /* top: ; */
+}
+
+@media only screen and (max-width: 992px) {    
+    div.sticky>div.body-container{
+        width: 100%;
+
+    }
+    div.sticky>aside.side-container{
+        width: 100%;
+        position: relative;
+    }    
+
+}
+

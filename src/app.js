@@ -11,6 +11,7 @@ import SingleIssuePage from "./single-issue-page";
 import DashboardPage from "./dashboard-page";
 import PrivateRoutes from "./private-routes";
 import PostsArchivePage from "./posts-archive-page";
+import PostsSinglePage from "./posts-single-page";
 // import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 
@@ -130,6 +131,7 @@ const App = () => {
                 <Route path="/archive/:category/:tag/single-car-page/:id/single-issue-page/:issueId" element={<SingleIssuePage/>}/>
                 <Route path="/archive/:category/:tag/single-car-page/:id" element={<SingleCarPage/>}/>
                 <Route path="/archive/:category/:tag" element={<ArchivePage/>}/>
+                <Route path="/posts-archive/:tag?/posts-single/:postId" element={<PostsSinglePage/>}/>
                 <Route path="/posts-archive/:tag?" element={<PostsArchivePage/>}/>
                 <Route element={<PrivateRoutes/>}>
                   <Route path="/dashboard/:section/:ticketSection?" element={<DashboardPage/>}/>
