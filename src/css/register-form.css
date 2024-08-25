@@ -1,0 +1,132 @@
+div.login-form-success{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    font-family: "iransans";
+    height: 300px;
+
+}
+div.register-form-container div.close-button{
+    /* background-color: black; */
+    display: flex;
+    /* padding: 10px; */
+    flex-direction: row;
+    justify-content: end;
+}
+div.register-form-container div.close-button>svg{
+    cursor: pointer;
+
+}
+div.register-form-container{
+    background-color: white;
+    width: 300px;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    height: fit-content;
+    border-radius: 5px;
+    z-index: 2;
+
+}
+
+div.register-form-container{
+    padding: 10px 0;
+    
+}
+div.register-form-container div.register-form-main>form{
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+    font-family: 'iransans';
+    font-weight: 300;
+    font-size: 15px;
+    color: #444;
+}
+div.register-form-container div.register-form-main>form>p.errMsg{
+    /* background-color: red; */
+    font-size: 13px;
+    color: red;
+   font-weight: 300;
+   font-family: "iransans";
+}
+div.register-form-container div.register-form-main>form>label{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    /* gap: 20px; */
+}
+div.register-form-container div.register-form-main>form>label>svg{
+    margin: 5px;
+    display: none;
+}
+div.register-form-container div.register-form-main>form>label>svg.label-svg-show{
+    display: block;
+
+}
+div.register-form-container div.register-form-main>form>input{
+
+    border: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #e8e8e8;
+    font-size: 13px;
+    font-weight: 300;
+}
+div.register-form-container div.register-form-main>form>div.form-err{
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 200;
+    border-radius: 5px;
+    display: none;
+
+}
+div.register-form-container div.register-form-main>form>div.form-err-show{
+    display: block;
+
+}
+div.register-form-container div.register-form-main>form>div.form-err svg{
+    margin-left: 5px;
+
+}
+div.register-form-container div.register-form-main>form>button{
+    margin-top: 40px;
+    border: none;
+    background-color: #0d6efd;
+    padding: 10px;
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    color: whitesmoke;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+
+}
+div.register-form-container div.register-form-main>form>button:disabled{
+    color: #444;
+    background-color: whitesmoke;
+}
+div.register-form-container div.register-form-options{
+    font-family: 'iransans';
+    font-size: 14px;
+    color: black;
+    font-weight: 200;
+    padding: 10px;
+}
+div.register-form-container div.register-form-options>p>span{
+
+ color: #0d6efd;
+ cursor: pointer;
+}

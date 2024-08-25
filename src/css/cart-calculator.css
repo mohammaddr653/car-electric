@@ -1,0 +1,26 @@
+div.cart-calculator-container{
+
+}
+div.cart-calculator-container div.li-left>input {
+    /* background-color: red; */
+    width: 50px;
+}
+
+div.cart-calculator-container div.ul-container{
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+div.cart-calculator-container div.ul-container::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+    visibility: hidden;
+}
+div.cart-calculator-container div.ul-container::-webkit-scrollbar-thumb{
+    background-color: #d3d3d3;
+    border-radius: 30px;
+}
+
+div.cart-calculator-container div.ul-container ul{
+    min-width: max-content;
+}

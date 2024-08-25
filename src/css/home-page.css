@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+    height: fit-content;
+
+
+}
+a{
+    text-decoration: none;
+}
+div#home-page{
+    /* height: 300vh; */
+    width: 100vw;
+    overflow-x: hidden;
+    /* margin-top: 50px; */
+}

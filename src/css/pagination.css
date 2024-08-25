@@ -1,0 +1,7 @@
+div.pagination-container{
+    background-color: yellow;
+}
+div.pagination-container nav{
+
+    width: max-content;
+}

@@ -1,0 +1,81 @@
+div.pooster1-container div.pooster1{
+    position: relative;
+    /* aspect-ratio: 10/2; */
+    font-family: 'iransans';
+}
+div.pooster1-container div.pooster1 div.pooster1-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.384);
+    background:linear-gradient(90deg,rgba(255, 0, 0, 0),black) ;
+    padding: 20px;
+    right: 0;
+}
+div.pooster1-container div.pooster1>img{ 
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center right;
+}
+div.pooster1-container div.pooster1 div.pooster1-parag{
+    /* background-color: green; */
+    width: 40%;
+    text-align: justify;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2rem;
+}
+div.pooster1-container div.pooster1 div.pooster1-buttons>button:nth-child(1){
+    background-color: rgb(255, 136, 0);
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 14px;
+    text-shadow: 0 0 10px black;
+}
+div.pooster1-container div.pooster1 div.pooster1-buttons>button:nth-child(2){
+    background-color: rgba(245, 245, 245, 0);
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 14px;
+
+}
+div.pooster1-container div.pooster1>div:nth-child(1)>div>span:nth-child(1){
+    font-size: 30px;
+}
+div.pooster1-container div.pooster1>div:nth-child(1)>div>span:nth-child(2){
+    font-size: 13px;
+    font-weight: 300;
+}
+/* div.pooster1-container div.pooster1>div:nth-child(2)>div{
+    aspect-ratio: 10/2;
+    background-color: orange;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.pooster1-container div.pooster1>div:nth-child(2)>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+} */
+
+@media only screen and (max-width: 768px) {  
+
+    div.pooster1-container div.pooster1 div.pooster1-parag{
+        width: 100%;
+    }
+        
+
+}

@@ -1,0 +1,393 @@
+div.post-carousel-container{
+    background-color: var(--_bg , black);
+    /* width: max-content; */
+    padding: 0;
+    width: 300px;
+}
+/* .owl-stage-outer{
+    direction: ltr;
+} */
+div.post-carousel-container div.close{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    margin-bottom: 30px;
+
+
+}
+div.post-carousel-container div.close>h4::before{
+    content: "|";
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 2px;
+    background-color: red;
+    color: red;
+    /* fill: red; */
+    border-radius: 30px;
+    margin-left: 5px;
+
+}
+div.post-carousel-container div.close>h4{
+    font-family: 'iransans';
+    font-weight: 300;
+    /* position: relative; */
+    font-size: 16px;
+    background-color: var(--_bg , black);
+    width: fit-content;
+    margin: 0;
+    /* padding: 10px; */
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    padding-left: 5px;
+
+}
+div.post-carousel-container div.close>hr{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+div.post-carousel-container div.close>a{
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: #F9F9F9;
+    font-family: 'iransans';
+    font-weight: 300;
+    position: relative;
+    font-size: 13px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    padding: 0;
+    padding-right: 10px;
+    color: #333;
+
+}
+div.post-carousel-container div.close>a>svg{
+    fill: red;
+
+}
+div.post-carousel-container div.buttons>div{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    /* padding: 0 10px; */
+}
+div.post-carousel-container div.buttons>div>button{
+    border: none;
+    padding: 5px 10px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.178);
+
+    color: #333;
+    font-family: 'iransans';
+    font-size: 13px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+
+}
+div.post-carousel-container div.buttons>div>button.clicked{
+    background-color: #333;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.178);
+
+    color: white;
+
+
+}
+
+
+div.post-carousel-container div.post-carousel{
+    padding: 0;
+    /* background-color: brown; */
+    gap: 15px;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    /* overflow-x: visible; */
+}
+div.post-carousel-container div.swiper{
+    position: initial;
+    z-index: 1;
+    /* overflow: visible; */
+}
+div.post-carousel-container div.post-carousel button{
+    border: none;
+    width: 30px;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: unset;
+}
+div.post-carousel-container div.post-carousel button.swiper-prev{
+    position: absolute;
+    right: -30px;
+    margin-left: 115px;
+
+    z-index: 2;
+    top: 0;
+
+}
+div.post-carousel-container div.post-carousel button.swiper-next{
+
+    position: absolute;
+    left: -30px;
+    top: 0;
+    z-index: 2;
+
+
+}
+div.post-carousel-container div.post-carousel div.post-card{
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.178);
+
+
+}
+div.post-carousel-container div.post-carousel div.swiper{
+    /* background-color: green; */
+    padding: 10px 0;
+    width: 100%;
+    /* height: 100%; */
+}
+
+
+
+
+/* start normal post card */
+
+
+
+div.post-carousel-container div.post-carousel div.post-card>a{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+
+    /* align-self: normal; */
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.image{
+    aspect-ratio: 300/200;
+    width: 100%;
+    position: relative;
+    /* background-color: brown; */
+    /* height: 100%; */
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.image-icons{
+
+    position: absolute;
+    top: 0;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    gap: 5px;
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.image-icons>span{
+    width: 30px;
+    /* aspect-ratio: 1/1; */
+    height: 30px;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #F9F9F9;
+    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.355);
+
+
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.caption{
+    /* background-color: pink; */
+    padding: 20px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100%; */
+
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.caption>div.title>h4{
+    width: 100%;
+    /* background-color: yellow; */
+    margin: 0;
+    padding: 0;
+    font-family: 'iransans';
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7rem;
+}
+
+div.post-carousel-container div.post-carousel div.post-card>a div.bottom{
+    /* background-color: burlywood; */
+    padding: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.bottom>div.right{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.bottom>div.right>span{
+
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    gap: 5px;
+    color: #444;
+    font-family: 'iransans';
+    font-size: 13px;
+    font-weight: 200;
+}
+div.post-carousel-container div.post-carousel div.post-card>a div.bottom>div.left{
+    color: #444;
+}
+
+div.post-carousel-container div.post-carousel div.swiper-button-next,
+div.post-carousel-container div.post-carousel div.swiper-button-prev{
+    display: none;
+}
+
+
+/* finish normal post card */
+
+
+
+
+
+/* start full image post card */
+
+
+div.post-carousel-container div.post-carousel div.post-card-full-image>a{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+
+    /* align-self: normal; */
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image{
+    aspect-ratio: 300/200;
+    width: 100%;
+    position: relative;
+    /* background-color: brown; */
+    /* height: 100%; */
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image div.inner-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 25, 35, 0.596);
+
+
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image div.inner-content>h4{
+
+    font-size: 14px;
+    line-height: 1.7rem;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    text-align: right;
+
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image div.bottom{
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: white;
+    /* height: 100%; */
+
+}
+div.post-carousel-container div.post-carousel div.post-card-full-image>a div.image div.bottom svg{
+    aspect-ratio: 1/1;
+    width: 14px;
+
+}
+
+div.post-carousel-container div.post-carousel div.swiper-button-next,
+div.post-carousel-container div.post-carousel div.swiper-button-prev{
+    display: none;
+}
+
+
+
+
+/* finish full image post card */
+
+
+@media only screen and (max-width: 768px) {  
+
+    div.post-carousel-container{
+        background-color: #F9F9F9;
+        /* width: max-content; */
+        padding: 0 50px;
+        width: 300px;
+    }
+    
+
+}

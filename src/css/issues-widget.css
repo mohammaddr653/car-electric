@@ -1,0 +1,210 @@
+div.issues-widget-container{
+    position: relative;
+    background-image: url("../../public/images/2023-Porsche-911-GT3-R-Rennsport-001-2160.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    background-position: center;
+    /* padding: 100px 0; */
+    font-family: 'iransans';
+    background-attachment: fixed;
+}
+div.issues-widget-container div.broken-glass{
+    background-image: url("../../public/images/—Pngtree—realistic\ cracked\ glass\ texture\ broken_15709427.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+
+}
+div.issues-widget-container div.issues-widget-title>h3{
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    color: whitesmoke;
+    margin: 0;
+}
+div.issues-widget-container div.issues-widget-intro>p{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 200;
+    color: #f9f9f9e3;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    line-height: 1.7rem;
+}
+div.issues-widget-container hr.issues-widget-hr{
+    color: white;
+    background-color: white;
+    width: 2px;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+    border-radius: 30px;
+    height: 100%;
+    
+}
+/* div.issues-widget-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+div.issues-widget-container .card {
+    /* top: 50%; */
+    box-shadow: 0 0 5px 0;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.742);
+    /* margin: 100px; */
+    text-align: center;
+}
+div.issues-widget-container div.issues-widget-right{
+    width: 25%;
+    /* flex-shrink: 0; */
+    /* background-color: yellow; */
+    padding: 0 20px;
+}
+div.issues-widget-container div.issues-widget-left{
+    width: 75%;
+    /* background-color: rgba(0, 0, 0, 0.315); */
+    background-color: #111;
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+div.issues-widget-container div.issues-widget-left::after,
+div.issues-widget-container div.issues-widget-left::before{
+    content: "";
+    --angle:0deg;
+    background-image: conic-gradient(from var(--angle) , blue,red,blue);
+    opacity: 0.1;
+    border-radius: 5px;
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    transition: all 3s;
+    /* animation: 3s spin linear infinite; */
+
+}
+div.issues-widget-container div.issues-widget-left:hover:after,
+div.issues-widget-container div.issues-widget-left:hover::before{
+    animation: 3s spin linear infinite;
+    transition: all 3s;
+
+}
+
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+    
+}
+div.issues-widget-container div.issues-widget-left::before{
+    filter: blur(1.5rem);
+    opacity: .5;
+}
+div.issues-widget-container div.issues-widget-left div.issues-archive>ul{
+    height: 300px;
+    overflow-y: scroll;
+    padding: 0;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-archive>ul>li>a{
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #d3d3d3;
+    box-shadow: 0 0 2px 0 white;
+    font-size: 15px;
+    font-weight: 300;
+}
+div.issues-widget-container div.issues-widget-left div.issues-archive>ul::-webkit-scrollbar{
+    background-color: red;
+    width: 4px;
+    visibility: hidden;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-archive>ul::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 132, 0);
+    width: 2px;
+    border-radius: 30px;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-input{
+    position: relative;
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-input>input{
+    height: 30px;
+    border: none;
+    box-shadow: none;
+    outline:  none;
+    padding-right: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-input>input:hover{
+    border: none;
+    box-shadow: none;
+    outline:  none;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-input>span{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    aspect-ratio: 1/1;
+    /* background-color: rgb(255, 132, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-input>span>svg{
+    width: 16px;
+    aspect-ratio: 1/1;
+    fill: black;
+
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-counter{
+    font-size: 14px;
+    font-weight: 200;
+    color: whitesmoke;
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-widget-ticket{
+    /* background-color: greenyellow; */
+    font-size: 13px;
+    color: whitesmoke;
+    font-weight: 200;
+}
+div.issues-widget-container div.issues-widget-left div.issues-top div.issues-widget-ticket>button{
+
+    background-color: var(--bs-primary);
+    border: none;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: whitesmoke;
+    
+}
+
+@media only screen and (max-width: 768px) {  
+    div.issues-widget-container div.issues-widget-right{
+        width: 100%;
+        /* flex-shrink: 0; */
+        /* background-color: yellow; */
+    }
+    div.issues-widget-container div.issues-widget-left{
+    
+        width: 100%;;
+    }
+        
+}
+

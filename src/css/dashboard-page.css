@@ -1,0 +1,332 @@
+div#dashboard-page{
+    background-color: var(--bg-primary);
+    font-family: 'iransans';
+
+}
+div#dashboard-page div#header-container{
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+
+}
+div#dashboard-page div#header-container div.menu-right nav>ul>li>a{
+    color: #444;
+    text-shadow: none;
+
+
+}
+div#dashboard-page div#header-container div.menu-right button.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-family: 'iransans';
+    color: #444;
+    font-weight: 300;
+    font-size: 14px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+
+}
+
+div#dashboard-page div#header-container div.menu-right button.search span{
+    padding: 7px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #444;
+}
+div#dashboard-page div#header-container div.menu-right button.search svg{
+    /* background-color: #444; */
+    /* padding: 10px; */
+    /* border-radius: 100%; */
+    fill: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+div#dashboard-page div#dashboard-page-main{
+    margin-top: 50px;
+    padding: 50px 0;
+    /* background-color: red; */
+
+}
+
+
+
+
+
+div#dashboard-page div#dashboard-page-main>div.container>div.sticky>div.body-container{
+    width: 75%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.147);
+    background-color: white;
+
+}
+div#dashboard-page div#dashboard-page-main>div.container>div.sticky>aside.side-container{
+    position: relative;
+    width: 25%;
+}
+div#dashboard-page div#dashboard-page-main>div.container>div.sticky>aside.side-container>div.aside-wrapper{
+    position: relative;
+    /* top: ; */
+
+}
+
+
+div#dashboard-page div#dashboard-page-main div.dashboard-right-top>img{ 
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    /* border: 5px solid orangered; */
+}
+div#dashboard-page div#dashboard-page-main div.dashboard-right-top>h4{
+    font-size: 20px;
+    font-weight: 300;
+    color: whitesmoke;
+
+}
+
+
+div#dashboard-page div#dashboard-page-main div.dashboard-right-top button.top-btns{ 
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100%;
+    border: 2px solid rgba(255, 255, 255, 0);
+    /* border: 2px solid white; */
+    /* border: none; */
+
+
+}
+div#dashboard-page div#dashboard-page-main div.dashboard-right-top button.top-btns:hover{ 
+    border: 2px solid orange;
+}
+div#dashboard-page div#dashboard-page-main div.dashboard-right-top button.top-btns>svg{ 
+    /* width: 20px; */
+    aspect-ratio: 1/1;
+    fill: whitesmoke;
+
+}
+div#dashboard-page div#dashboard-page-main hr.middle-hr{
+    color: whitesmoke;
+    /* margin: 0; */
+    height: 2px;
+    padding: 0;
+    border: none;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.237);
+}
+
+div#dashboard-page div#dashboard-page-main div.dashboard-right-bottom>nav>ul>li{ 
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: #22222244;
+    opacity: 1;
+    transition: all .3s;
+
+
+}
+
+div#dashboard-page div#dashboard-page-main div.dashboard-right-bottom>nav>ul>li.active{ 
+    background-color: orange;
+    color: #222;
+
+}
+
+div#dashboard-page div#dashboard-page-main div.dashboard-right-bottom>nav>ul>li:hover{ 
+    /* background-color: rgba(255, 0, 0, 0.167); */
+    transition: all .3s;
+    opacity: .5;
+    cursor: pointer;
+
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets>div>h3{
+    font-size: 20px;
+    margin: 0;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets>div>button{
+    font-size: 15px;
+    font-weight: 300;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets>div.table-container{
+    height:400px;
+    overflow-y: scroll;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets>div.table-container::-webkit-scrollbar{
+    background-color: yellow;
+    visibility: hidden;
+    width: 7px;
+    height: 7px;
+
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets>div.table-container::-webkit-scrollbar-thumb{
+    background-color: #d3d3d3;
+    border-radius: 30px;
+
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets table th{
+    font-weight:300 ;
+    padding: 20px;
+    color: whitesmoke;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets table tr{
+    vertical-align: middle;
+    background-color: white;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets table tr:hover{
+    background-color: #d3d3d3;
+    transition: all .3s;
+    cursor: pointer;
+
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets table td{
+    font-weight:300 ;
+    font-size: 15px;
+    padding: 40px;
+    background-color: transparent;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.tickets table td.answered>span{
+    background-color: green;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 13px;
+    white-space:nowrap;
+    color: whitesmoke;
+    text-shadow: 0 0 2px black;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section {
+    /* background-color: red; */
+    font-size: 13px;
+    color: #555;
+    font-weight: 300;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-information h4{
+
+    font-size: 18px;
+    margin: 0;
+    color: #444;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-content p{
+    font-size: 15px;
+    text-align: justify;
+    color: #666;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-content h4{
+
+    font-size: 18px;
+    margin: 0;
+    color: #444;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments h4{
+
+    font-size: 18px;
+    margin: 0;
+    color: #444;
+}
+
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments div.comment-card h5{
+    /* background-color: pink; */
+    font-size: 15px;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments div.comment-card h5>span{
+    font-size: 13px;
+    font-weight: 300;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: orange;
+    color: #222;
+
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments div.comment-card p{
+    font-size: 15px;
+    text-align: justify;
+    color: #666;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments form textarea{
+    resize: none;
+    font-family: 'iransans';
+    font-weight: 300;
+    color: #666;
+    font-size: 15px;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments form>button{
+    align-self: flex-end;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.ticket-section div.ticket-comments form>button{
+    width: fit-content;
+    padding: 5px 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+
+
+div#dashboard-page div#dashboard-page-main div.body-container>div.new-ticket h4{
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.new-ticket form label{
+    font-size: 15px;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.new-ticket form input{
+    color: #555;
+    font-weight: 300;
+    font-size: 15px;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.new-ticket form textarea{
+    resize: none;
+    color: #555;
+    font-weight: 300;
+    font-size: 15px;
+}
+div#dashboard-page div#dashboard-page-main div.body-container>div.new-ticket form>button{
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+
+
+div#dashboard-page div#dashboard-page-main div.body-container>div.cart>div>h4{
+    font-size: 20px;
+    /* font-weight: 300; */
+    margin: 0;
+}
+
+div#dashboard-page div#dashboard-page-main div.body-container>div.cart>div.buyer-info input{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+/* lg */
+@media only screen and (max-width: 992px) {    
+    div#dashboard-page div#dashboard-page-main>div.container>div.sticky>div.body-container{
+        width: 100%;
+
+    }
+    div#dashboard-page div#dashboard-page-main>div.container>div.sticky>aside.side-container{
+        width: 100%;
+        position: relative;
+    }    
+
+}
+
+

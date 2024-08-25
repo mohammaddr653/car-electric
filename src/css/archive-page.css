@@ -1,0 +1,258 @@
+div#archive-page{
+    background-color: #f9f9f9;
+    /* margin-top: 50px; */
+    /* padding: 50px 0; */
+
+}
+div#archive-page div.archive-banner{
+    /* aspect-ratio: 1536/520; */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+
+}
+div#archive-page div.archive-banner>img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+div#archive-page div.archive-banner>span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(25, 25, 35, 0.596);
+
+}
+div#archive-page div.archive-banner>h1{
+    color: whitesmoke;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    bottom: 0;
+    transition: all 2s;
+    /* visibility: hidden; */
+    opacity: 0;
+    font-family: 'iransans';
+
+}
+div#archive-page div.archive-banner>h1.move{
+    /* visibility: visible; */
+    bottom: 70%;
+    transition: all 2s;
+    opacity: 1;
+
+}
+/* div#archive-page div#header-container{
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+
+}
+div#archive-page div#header-container div.menu-right nav>ul>li>a{
+    color: #444;
+    text-shadow: none;
+
+
+}
+div#archive-page div#header-container div.menu-right button.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-family: 'iransans';
+    color: #444;
+    font-weight: 300;
+    font-size: 14px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+
+}
+
+div#archive-page div#header-container div.menu-right button.search span{
+    padding: 7px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #444;
+}
+div#archive-page div#header-container div.menu-right button.search svg{
+    fill: white;
+    width: 100%;
+    height: 100%;
+} */
+
+div#archive-page-main>div.container div.archive-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,calc(100%/4 - 10px));
+    grid-template-rows: min-content;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 10px;
+    padding: 40px;
+    row-gap: 10px;
+    /* width: 75%; */
+
+}
+
+div#archive-page-main>div.container div.archive-body div.card{
+    height: 100%;
+    background: linear-gradient(45deg,#222 , #111) ;
+    padding: 0;
+    position: relative;
+    color: #333;
+    font-family: 'iransans';
+    overflow: hidden;
+    font-weight: 300;
+    /* height:fit-content ; */
+    /* padding: 10px 10px; */
+    font-size: 15px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.596);
+    border: none;
+    /* background-color: red; */
+    /* text-shadow: none; */
+
+
+
+}
+div#archive-page-main>div.container div.archive-body div.card span.card-tag{
+    /* background-color: whitesmoke; */
+    /* padding: 3px 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: 13px;
+    border-radius: 10px;
+    color: #444;
+    padding: 0 15px;
+    padding-top: 5px;
+    font-weight: 200;
+    /* margin: 0 10px; */
+}
+div#archive-page-main>div.container div.archive-body div.card div.card-title>h3{
+    font-size: 16px;
+    /* padding: 0 10px ; */
+    color: #e7e7e7;
+    font-weight: 300;
+    padding: 0 15px;
+
+
+}
+
+div#archive-page-main>div.container div.archive-body div.card img.card-img{
+    width: 100%;
+    border-radius: 0;
+    aspect-ratio: 293/195;
+    margin-bottom: 20px;
+
+}
+div#archive-page-main>div.container div.archive-body div.card div.card-explain{
+    /* background-color: red; */
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+div#archive-page-main>div.container div.archive-body div.card div.card-explain>p{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 5px;
+    font-size: 13px;
+    color: #e7e7e79f;
+    font-weight: 300;
+
+}
+div#archive-page-main>div.container div.archive-body div.card a.card-link{
+    display: block;
+    position: absolute;
+    background-color: #3333336d;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s;
+
+}
+div#archive-page-main>div.container div.archive-body div.card:hover a.card-link{
+
+    opacity: 1;
+    transition: all .3s;
+}
+div#archive-page-main>div.container div.archive-body div.card a.card-link>span{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    top: 50%;
+    margin-top: -50px;
+}
+
+@media only screen and (max-width: 1170px) {
+    div#archive-page-main>div.container div.archive-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,calc(100%/3 - 10px));
+        justify-content: space-between;
+        column-gap: 10px;
+        row-gap: 10px;
+        width: 100%;
+
+    }
+    
+}
+
+@media only screen and (max-width: 632px) {
+    div#archive-page-main>div.container div.archive-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,calc(100%/2 - 10px));
+        justify-content: end;
+        column-gap: 10px;
+        row-gap: 10px;
+    
+    }
+    
+}
+
+@media only screen and (max-width: 579px) {
+    div#archive-page-main>div.container div.archive-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,calc(100%/2 - 10px));
+        justify-content: end;
+        column-gap: 10px;
+        row-gap: 10px;
+    
+    }
+}
+@media only screen and (max-width: 500px) {
+    div#archive-page-main>div.container div.archive-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,calc(100%));
+        justify-content: end;
+        column-gap: 10px;
+        row-gap: 10px;
+    
+    }
+
+}
+
+
+
+
+

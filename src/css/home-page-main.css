@@ -1,0 +1,108 @@
+div#home-page-main-container{
+    height:fit-content;
+    position: relative;
+    /* bottom: 100px; */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    --_bg:var(--bg-primary,black);
+}
+
+
+/* start for main archive */
+
+
+div#home-page-main-container div#main-page-arch-container{
+    background:linear-gradient(90deg,white 50%,#f9f9f9 50%);
+    height:fit-content;
+    /* margin-top: 100px; */
+    position: relative;
+    /* bottom: 100px; */
+    z-index: 1;
+    font-family: 'iransans';
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0;
+    /* padding: 25px 0; */
+    /* padding-top: 20px; */
+
+}
+div#home-page-main-container div#main-page-arch-container>div.container{
+    padding: 0;
+}
+div#home-page-main-container div#main-page-arch-container>div.container div.main-page-arch-body{
+    background-color: white;
+    height: fit-content;
+    width: 50%;
+    padding: 25px;
+    padding-left: 0;
+
+}
+div#home-page-main-container div#main-page-arch-container div.sticky>div.body-container{
+    width: 50%;
+}
+div#home-page-main-container div#main-page-arch-container div.sticky>aside.side-container{
+    position: relative;
+    width: 50%;
+}
+div#home-page-main-container div#main-page-arch-container div.sticky>aside.side-container>div.aside-wrapper{
+    position: relative;
+    /* top: ; */
+
+}
+:root,[data-base-li="e"]{
+    color: red;
+}
+
+
+@media only screen and (max-width: 1170px) {
+    div#home-page-main-container div#main-page-arch-container{
+        background: white;
+        height:fit-content;
+        /* margin-top: 100px; */
+        position: relative;
+        /* bottom: 100px; */
+        z-index: 1;
+        font-family: 'iransans';
+        font-weight: 300;
+        font-size: 15px;
+        padding: 30px 0; 
+        /* padding: 25px 0; */
+        /* padding-top: 20px; */
+    
+    }    
+    div#home-page-main-container div#main-page-arch-container div.sticky>div.body-container{
+        width: 100%;
+    }
+    div#home-page-main-container div#main-page-arch-container div.sticky>aside.side-container{
+        position: relative;
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 632px) {
+    
+}
+
+@media only screen and (max-width: 579px) {
+    /* div#home-page-main-container div#main-page-arch-container>div.container{
+        padding: 0 10px;
+    } */
+    div#home-page-main-container div#main-page-arch-container{
+        padding: 30px 20px;
+
+    }
+}
+@media only screen and (max-width: 500px) {
+
+}
+
+
+
+
+
+
+
+/* finish for main archive */
