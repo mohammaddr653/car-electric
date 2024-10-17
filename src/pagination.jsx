@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/pagination.css';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect , useState } from 'react';
@@ -36,10 +36,11 @@ const Pagination = (props) => {
 
     useEffect(()=>{
         changePage(1);
+        console.log(pages);
     },[pages])
 
     function changePage(value){
-        if(value>0 && value<arrayLength-1){
+        if(value>0 && value-1<pages.length){
             setSelectedPage(value);
             let start=(value*props.number)-props.number;
             let end=(value*props.number);

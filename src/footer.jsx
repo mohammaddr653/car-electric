@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/footer.css';
 import axios from 'axios';
 import { useEffect } from 'react';

@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/issues-widget.css';
 import { Link , useNavigate } from 'react-router-dom';
 import { useContext } from 'react';

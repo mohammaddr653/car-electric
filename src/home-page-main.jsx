@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/home-page-main.css';
 import Banner from './banner';
 import Ads from './ads';

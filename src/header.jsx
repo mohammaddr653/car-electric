@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/header.css';
 import axios from 'axios';
 import Search from './search';
@@ -11,7 +11,7 @@ import globalContext from './context/global-context';
 import LoginForm from './login-form';
 import RegisterForm from './register-form';
 
-const Header = () => {
+const Header = (props) => {
     let globalCon=useContext(globalContext);
 
 
@@ -82,7 +82,7 @@ const Header = () => {
 
     return ( 
         <header>
-            <div id="header-container" className='container-fluid p-0'>
+            <div id="header-container" className={props.changable===true?'container-fluid p-0':'container-fluid no-change p-0'}>
                 <div className="container-fluid p-0">
                     <div className="w-100 menu-top m-0 d-flex align-items-center justify-content-between">
                         <div className='menu-right'>
@@ -134,7 +134,7 @@ const Header = () => {
                                                                                                                                 if(forthItem.mother===thirdItem.tag){
                                                                                                                                     return(
                                                                                                                                         <li key={forthIndex}>
-                                                                                                                                            <Link to={`/archive/${forthItem.category}/${forthItem.tag}`}>
+                                                                                                                                            <Link to={`/${forthItem.href}/${forthItem.tag}`}>
                                                                                                                                                 {forthItem.title}
                                                                                                                                             </Link>
                                                                                                                                         </li>

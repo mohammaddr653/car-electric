@@ -12,6 +12,7 @@ import DashboardPage from "./dashboard-page";
 import PrivateRoutes from "./private-routes";
 import PostsArchivePage from "./posts-archive-page";
 import PostsSinglePage from "./posts-single-page";
+import ProductsArchivePage from "./products-archive-page";
 // import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 
@@ -20,18 +21,12 @@ import PostsSinglePage from "./posts-single-page";
 const App = () => {
     const[cars,setCars]=useState([]);
     const[posts,setPosts]=useState([]);
+    const[products,setProducts]=useState([]);
     const[ads,setAds]=useState([]);
     const[usersList,setUsersList]=useState([]);
     const[cart,setCart]=useState([]);
-    const[loggedInUser,setLoggedInUser]=useState(
-      {
-        "id":"1",
-        "name":"محمد امین درخشنده",
-        "email":"mohammaddr653@gmail.com",
-        "pass":"Dr7370**"
-    }
-    );
-    const[loginCheck,setLoginCheck]=useState(true);
+    const[loggedInUser,setLoggedInUser]=useState();
+    const[loginCheck,setLoginCheck]=useState(false);
     let [loginFormState , setLoginFormState] = useState(false);
     let [registerFormState , setRegisterFormState] = useState(false);
     const[firstClassMenu,setFirstClassMenu]=useState([]);
@@ -125,14 +120,27 @@ const App = () => {
   
     },[])
 
+    useEffect(()=>{
+      async function getData(){
+        const response = await axios.get("/products.json");
+        console.log("this is your products : ")
+        console.log(response.data);
+        setProducts(response.data);
+      }
+      getData();
+  
+    },[])
+
+
     return ( 
-        <globalContext.Provider value={{cart,setCart,loggedInUser,setLoggedInUser,usersList,setUsersList,registerFormState , setRegisterFormState,loginFormState , setLoginFormState,loginCheck,setLoginCheck,issues,setIssues,firstClassMenu,setFirstClassMenu,secondClassMenu,setSecondClassMenu,thirdClassMenu,setThirdClassMenu,forthClassMenu,setForthClassMenu,menuImg,setMenuImg,posts,setPosts,ads,setAds,cars,setCars}}>
+        <globalContext.Provider value={{products,setProducts,cart,setCart,loggedInUser,setLoggedInUser,usersList,setUsersList,registerFormState , setRegisterFormState,loginFormState , setLoginFormState,loginCheck,setLoginCheck,issues,setIssues,firstClassMenu,setFirstClassMenu,secondClassMenu,setSecondClassMenu,thirdClassMenu,setThirdClassMenu,forthClassMenu,setForthClassMenu,menuImg,setMenuImg,posts,setPosts,ads,setAds,cars,setCars}}>
             <Routes>
                 <Route path="/archive/:category/:tag/single-car-page/:id/single-issue-page/:issueId" element={<SingleIssuePage/>}/>
-                <Route path="/archive/:category/:tag/single-car-page/:id" element={<SingleCarPage/>}/>
-                <Route path="/archive/:category/:tag" element={<ArchivePage/>}/>
+                <Route path="/archive/:tag/single-car-page/:id" element={<SingleCarPage/>}/>
+                <Route path="/archive/:tag" element={<ArchivePage/>}/>
                 <Route path="/posts-archive/:tag?/posts-single/:postId" element={<PostsSinglePage/>}/>
                 <Route path="/posts-archive/:tag?" element={<PostsArchivePage/>}/>
+                <Route path="/products-archive/:tag?" element={<ProductsArchivePage/>}/>
                 <Route element={<PrivateRoutes/>}>
                   <Route path="/dashboard/:section/:ticketSection?" element={<DashboardPage/>}/>
                 </Route>

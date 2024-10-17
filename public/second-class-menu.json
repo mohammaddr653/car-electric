@@ -75,7 +75,7 @@
     {
         "href": "#",
         "title": "خودرو های نوع 1",
-        "tag":"cars-group-1",
+        "tag":"shop-group-1",
         "mother":"shop",
         "hasChild":true
 
@@ -83,7 +83,7 @@
     {
         "href": "#",
         "title": "خودرو های نوع 2",
-        "tag":"cars-group-2",
+        "tag":"shop-group-2",
         "mother":"shop"
     },
 

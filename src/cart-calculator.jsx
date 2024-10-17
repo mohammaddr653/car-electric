@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/cart-calculator.css';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';

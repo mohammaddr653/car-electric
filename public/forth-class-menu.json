@@ -1,73 +1,63 @@
 
 [
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 1",
-        "category":"cars",
         "tag":"car-series-a-tip-1",
         "img":"/images/5DKAyyw-car-wallpaper.jpg",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 2",
-        "category":"cars",
         "tag":"car-series-a-tip-2",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 3",
-        "category":"cars",
         "tag":"car-series-a-tip-3",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 4",
-        "category":"cars",
         "tag":"car-series-a-tip-4",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 5",
-        "category":"cars",
         "tag":"car-series-a-tip-5",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 6",
-        "category":"cars",
         "tag":"car-series-a-tip-6",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 7",
-        "category":"cars",
         "tag":"car-series-a-tip-7",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 8",
-        "category":"cars",
         "tag":"car-series-a-tip-8",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 9",
-        "category":"cars",
         "tag":"car-series-a-tip-9",
         "mother":"brand-a"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 10",
-        "category":"cars",
         "tag":"car-series-a-tip-10",
         "mother":"brand-a"
     },
@@ -75,19 +65,19 @@
 
 
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 1",
         "tag":"car-series-b-tip-1",
         "mother":"brand-b"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 2",
         "tag":"car-series-b-tip-2",
         "mother":"brand-b"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 3",
         "tag":"car-series-b-tip-3",
         "mother":"brand-b"
@@ -98,26 +88,88 @@
 
 
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 1",
         "tag":"car-series-c-tip-1",
         "mother":"brand-c"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 2",
         "tag":"car-series-c-tip-2",
         "mother":"brand-c"
     },
     {
-        "href": "#",
+        "href": "archive",
         "title": "خودرو های تیپ 3",
         "tag":"car-series-c-tip-3",
         "mother":"brand-c"
+    },
+
+
+
+
+    {
+        "href": "products-archive",
+        "title": "محصولات سری 1",
+        "tag":"shop-series-a-tip-1",
+        "img":"/images/5DKAyyw-car-wallpaper.jpg",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 2",
+        "tag":"shop-series-a-tip-2",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 3",
+        "tag":"shop-series-a-tip-3",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 4",
+        "tag":"shop-series-a-tip-4",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 5",
+        "tag":"shop-series-a-tip-5",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 6",
+        "tag":"shop-series-a-tip-6",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 7",
+        "tag":"shop-series-a-tip-7",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 8",
+        "tag":"shop-series-a-tip-8",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 9",
+        "tag":"shop-series-a-tip-9",
+        "mother":"shop-brand-a"
+    },
+    {
+        "href": "products-archive",
+        "title": "محصول سری 10",
+        "tag":"shop-series-a-tip-10",
+        "mother":"shop-brand-a"
     }
-
-
-
 
 ]
 
