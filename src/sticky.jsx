@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/sticky.css';
 import { useEffect } from 'react';
 const Sticky = (props) => {

@@ -35,6 +35,23 @@ import StickyAside from "./sticky-aside";
 const  PostsSinglePage= () => {
     let params = useParams();
     let globalCon=useContext(globalContext);
+    const[selectedPost,setSelectedPost]=useState([])
+
+    useEffect(()=>{
+        if(globalCon.posts){
+            for(let item of globalCon.posts){
+                if(item.id===params.postId){
+                    setSelectedPost(item);
+                }
+            }
+        }
+    },[params.postId,globalCon.posts])
+
+
+    useEffect(()=>{
+        console.log("this is selected post")
+        console.log(selectedPost);
+    },[selectedPost])
 
     return (
         <div id="posts-single-page">
@@ -43,87 +60,45 @@ const  PostsSinglePage= () => {
                 <div className="container p-0">
                     <Sticky>
                         <StickyBody>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
-                            <div className="bg-danger m-0 p-0">sdsd</div>
+                            <div className="bg-light border rounded p-4 d-flex flex-column gap-3">
+                                <div className=" p-0 d-flex flex-row justify-content-between align-items-center">
+                                    <h1 className="fs-5 m-0">{selectedPost?.title}</h1>
+                                </div>
+                                <div className=" writing-info p-0 d-flex flex-row justify-content-start gap-2 align-items-center">
+                                    <span className="rounded-circle overflow-hidden">
+                                        <img src={`/images/${selectedPost?.authorImg}`} alt="" />
+                                    </span>
+                                    <h4 className="fs-6 m-0">{selectedPost?.authorName}</h4>
+                                </div>
+                            </div>
+                            <img src={selectedPost?.img} alt="" />
+                            <div className="content-container">
+                                <p>
+                                    با این که شفافیت یکی از چالش‌های تبلیغات در قالب ریتیل مدیا است اما پاکزاد می‌گوید چالش جدی‌تری در این حوزه وجود دارد و این طور توضیحش می‌دهد:
+                                    «چالش مهمی که وجود دارد به چگونگی استفاده از داده‌های کاربران برای انجام تبلیغ مربوط می‌شود؛ در این زمینه مساله حریم شخصی افراد مطرح می‌شود. از یک سو این موضوع مطرح است که طوری نباشد که بتوان از بررسی رفتار به کاربر رسید و به اطلاعات بسیاری که پلتفرم‌ از کاربر دارد دسترسی داشت. ایجاد تعادل در این مساله یکی از چالش‌های مهم این حوزه در دنیاست. از سوی دیگر هم نباید کاربر را با تبلیغات آزار بدهیم؛ باید فقط تبلیغ کالایی را نشان بدهیم که کاربر واقعا آن را می‌خواهد و قصد خریدش را دارد. هرچه دیتای دست اول بیشتری از کاربر داشته باشیم عملا تبلیغات کمتر آزاردهنده خواهند بود.»
+                                    ریتیل مدیا با همه ویژگی‌ها و تکیه‌ای که بر تکنولوژی دارد می‌خواهد ضمن افزایش فروش و سود تبلیغ‌کننده، عرصه رقابت را داغ‌تر کند. در کنار این اهداف قصد این گونه تبلیغات هدفمند کردن هرچه بیشتر تبلیغات است تا هم هزینه‌ای که کسب‌وکارها برای تبلیغ می‌کنند به دست مشتری درست برسد و خرید اتفاق بیفتد، هم کاربران با انبوهی از تبلیغات نامناسب که هیچ ارتباطی با آن‌ها ندارد آزار نبینند.
+                                </p>
+                                <p>
+                                    با این که شفافیت یکی از چالش‌های تبلیغات در قالب ریتیل مدیا است اما پاکزاد می‌گوید چالش جدی‌تری در این حوزه وجود دارد و این طور توضیحش می‌دهد:
+                                    «چالش مهمی که وجود دارد به چگونگی استفاده از داده‌های کاربران برای انجام تبلیغ مربوط می‌شود؛ در این زمینه مساله حریم شخصی افراد مطرح می‌شود. از یک سو این موضوع مطرح است که طوری نباشد که بتوان از بررسی رفتار به کاربر رسید و به اطلاعات بسیاری که پلتفرم‌ از کاربر دارد دسترسی داشت. ایجاد تعادل در این مساله یکی از چالش‌های مهم این حوزه در دنیاست. از سوی دیگر هم نباید کاربر را با تبلیغات آزار بدهیم؛ باید فقط تبلیغ کالایی را نشان بدهیم که کاربر واقعا آن را می‌خواهد و قصد خریدش را دارد. هرچه دیتای دست اول بیشتری از کاربر داشته باشیم عملا تبلیغات کمتر آزاردهنده خواهند بود.»
+                                    ریتیل مدیا با همه ویژگی‌ها و تکیه‌ای که بر تکنولوژی دارد می‌خواهد ضمن افزایش فروش و سود تبلیغ‌کننده، عرصه رقابت را داغ‌تر کند. در کنار این اهداف قصد این گونه تبلیغات هدفمند کردن هرچه بیشتر تبلیغات است تا هم هزینه‌ای که کسب‌وکارها برای تبلیغ می‌کنند به دست مشتری درست برسد و خرید اتفاق بیفتد، هم کاربران با انبوهی از تبلیغات نامناسب که هیچ ارتباطی با آن‌ها ندارد آزار نبینند.
+                                </p>
+                                <p>
+                                    با این که شفافیت یکی از چالش‌های تبلیغات در قالب ریتیل مدیا است اما پاکزاد می‌گوید چالش جدی‌تری در این حوزه وجود دارد و این طور توضیحش می‌دهد:
+                                    «چالش مهمی که وجود دارد به چگونگی استفاده از داده‌های کاربران برای انجام تبلیغ مربوط می‌شود؛ در این زمینه مساله حریم شخصی افراد مطرح می‌شود. از یک سو این موضوع مطرح است که طوری نباشد که بتوان از بررسی رفتار به کاربر رسید و به اطلاعات بسیاری که پلتفرم‌ از کاربر دارد دسترسی داشت. ایجاد تعادل در این مساله یکی از چالش‌های مهم این حوزه در دنیاست. از سوی دیگر هم نباید کاربر را با تبلیغات آزار بدهیم؛ باید فقط تبلیغ کالایی را نشان بدهیم که کاربر واقعا آن را می‌خواهد و قصد خریدش را دارد. هرچه دیتای دست اول بیشتری از کاربر داشته باشیم عملا تبلیغات کمتر آزاردهنده خواهند بود.»
+                                    ریتیل مدیا با همه ویژگی‌ها و تکیه‌ای که بر تکنولوژی دارد می‌خواهد ضمن افزایش فروش و سود تبلیغ‌کننده، عرصه رقابت را داغ‌تر کند. در کنار این اهداف قصد این گونه تبلیغات هدفمند کردن هرچه بیشتر تبلیغات است تا هم هزینه‌ای که کسب‌وکارها برای تبلیغ می‌کنند به دست مشتری درست برسد و خرید اتفاق بیفتد، هم کاربران با انبوهی از تبلیغات نامناسب که هیچ ارتباطی با آن‌ها ندارد آزار نبینند.
+                                </p>
+                                <p>
+                                    با این که شفافیت یکی از چالش‌های تبلیغات در قالب ریتیل مدیا است اما پاکزاد می‌گوید چالش جدی‌تری در این حوزه وجود دارد و این طور توضیحش می‌دهد:
+                                    «چالش مهمی که وجود دارد به چگونگی استفاده از داده‌های کاربران برای انجام تبلیغ مربوط می‌شود؛ در این زمینه مساله حریم شخصی افراد مطرح می‌شود. از یک سو این موضوع مطرح است که طوری نباشد که بتوان از بررسی رفتار به کاربر رسید و به اطلاعات بسیاری که پلتفرم‌ از کاربر دارد دسترسی داشت. ایجاد تعادل در این مساله یکی از چالش‌های مهم این حوزه در دنیاست. از سوی دیگر هم نباید کاربر را با تبلیغات آزار بدهیم؛ باید فقط تبلیغ کالایی را نشان بدهیم که کاربر واقعا آن را می‌خواهد و قصد خریدش را دارد. هرچه دیتای دست اول بیشتری از کاربر داشته باشیم عملا تبلیغات کمتر آزاردهنده خواهند بود.»
+                                    ریتیل مدیا با همه ویژگی‌ها و تکیه‌ای که بر تکنولوژی دارد می‌خواهد ضمن افزایش فروش و سود تبلیغ‌کننده، عرصه رقابت را داغ‌تر کند. در کنار این اهداف قصد این گونه تبلیغات هدفمند کردن هرچه بیشتر تبلیغات است تا هم هزینه‌ای که کسب‌وکارها برای تبلیغ می‌کنند به دست مشتری درست برسد و خرید اتفاق بیفتد، هم کاربران با انبوهی از تبلیغات نامناسب که هیچ ارتباطی با آن‌ها ندارد آزار نبینند.
+                                </p>
+                            </div>
                         </StickyBody>
                         <StickyAside showinmobile={false}>
                             <div className="aside-wrapper rounded overflow-hidden">
                                 {/* هیچ عنصری مارجین نباید داشته باشد */}
                                 <div className="latest-posts p-0 d-flex flex-column gap-3 m-0">
-                                    <Ads adsId={[2]}></Ads>
-                                    <Ads adsId={[4]}></Ads>
                                     <div className="row p-2 rounded m-0">
                                         آخرین مطالب
                                     </div>
@@ -154,13 +129,9 @@ const  PostsSinglePage= () => {
                             </div>
                         </StickyAside>
                     </Sticky>       
-                    <div className="bg-primary">sds</div> 
-                    <div className="bg-primary">sds</div> 
-                    <div className="bg-primary">sds</div> 
-                    <div className="bg-primary">sds</div> 
                 </div>
             </div>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 }

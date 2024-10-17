@@ -1,6 +1,6 @@
   
 div#header-container{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--_transparent);
     position: fixed;
     top: 0;
     transition: all .3s;
@@ -8,9 +8,21 @@ div#header-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    --_transparent:var(--transparent,black);
+    --_bg-secondary:var(--bg-secondary,black);
+    --_tx-secondary:var(--tx-secondary,black);
+    --_tx-primary:var(--tx-primary,black);
+
+}
+div#header-container.no-change{
+    --_transparent:var(--bg-secondary,black);
+    --_bg-secondary:var(--bg-secondary,black);
+    --_tx-secondary:var(--tx-secondary,black);
+    --_tx-primary:var(--tx-primary,black);
+
 }
 div#header-container.header-container-change{
-    background-color: white;
+    background-color: var(--_bg-secondary);
     transition: all .3s;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
 
@@ -299,7 +311,7 @@ div#header-container div.menu-right nav>ul div.third-class-menu>ul>li>div.forth-
 
 }
 div#header-container div.menu-right nav>ul div.forth-class-menu>ul>li>a{
-    color: #444;
+    color: var(--_tx-secondary);
     font-size: 14px;
 }
 
@@ -309,13 +321,13 @@ div#header-container div.menu-right nav>ul div.forth-class-menu>ul>li>a{
 
 
 div#header-container div.menu-right nav>ul>li>a{
-    color: white;
+    color: var(--_bg-secondary);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.601);
 
 
 }
 div#header-container.header-container-change div.menu-right nav>ul>li>a{
-    color: #444;
+    color: var(--_tx-secondary);
     text-shadow: none;
 }
 div#header-container div.menu-right button.search{
@@ -325,7 +337,7 @@ div#header-container div.menu-right button.search{
     align-items: center;
     gap: 5px;
     font-family: 'iransans';
-    color: white;
+    color: var(--_bg-secondary);
     font-weight: 300;
     font-size: 14px;
     border: none;
@@ -333,7 +345,7 @@ div#header-container div.menu-right button.search{
 
 }
 div#header-container.header-container-change div.menu-right button.search{
-    color: #444;
+    color: var(--_tx-secondary);
 }
 
 div#header-container div.menu-right button.search span{
@@ -344,10 +356,10 @@ div#header-container div.menu-right button.search span{
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    background-color: white;
+    background-color: var(--_bg-secondary);
 }
 div#header-container.header-container-change div.menu-right button.search span{
-    background-color: #444;
+    background-color: var(--_tx-secondary);
 
 
 }
@@ -355,12 +367,12 @@ div#header-container div.menu-right button.search svg{
     /* background-color: #444; */
     /* padding: 10px; */
     /* border-radius: 100%; */
-    fill: #333;
+    fill: var(--_tx-primary);
     width: 100%;
     height: 100%;
 }
 div#header-container.header-container-change div.menu-right button.search svg{
-    fill:white;
+    fill:var(--_bg-secondary);
 
 }
 
@@ -372,7 +384,7 @@ div#header-container div.menu-left>div.user-btn-container div.login-btn-containe
 }
 
 div#header-container.header-container-change div.menu-left>div.user-btn-container div.login-btn-container>svg{
-    fill: #333;
+    fill: var(--_tx-primary);
 }
 div#header-container div.menu-left>div.user-btn-container div.user-avatar-hoverable{
     position: relative;

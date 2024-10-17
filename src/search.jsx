@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/search.css';
 import axios from 'axios';
 import { useEffect } from 'react';

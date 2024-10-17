@@ -1,4 +1,4 @@
-import './css/fonts.css';
+// import './css/fonts.css';
 import './css/three-box.css';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
